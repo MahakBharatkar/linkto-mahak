@@ -1,8 +1,48 @@
+const linkInfo = [
+  {
+    link_text: "My Instagram",
+    url: "https://www.instagram.com/nyctophiles221?igsh=MXQzM2MxOXZ4bmw3eg%3D%3D&utm_source=qr",
+    image: "/mahak_insta.png",
+  },
+  {
+    link_text: "My Portfolio Website",
+    url: "https://mahak-portfolio.vercel.app/",
+    image: "/android-chrome-192x192.png",
+  },
+];
 
 export default function Home() {
   return (
-   <div className="h-full bg-slate-100">
-    Welcome to Mahak's Links
-   </div>
+    <div className="h-full bg-slate-100 pt-0 pb-20 px-1.5">
+      <div className="flex justify-center">
+        <img src="/mahak_calligraphy.png" width={300} height={300} />
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-2 gap-y-3">
+        {linkInfo.map((item) => {
+          return (
+            <a href={item.url}>
+              <div
+                className="bg-[#C84E59] rounded-lg shadow-xl min-h-[50px] px-2 py-2 flex items-center justify-start"
+                key={item.link_text}
+              >
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    width={30}
+                    height={30}
+                    alt="image"
+                    className="rounded-full mr-4"
+                  />
+                ) : null}
+                <span className="text-slate-100 text-base">
+                  {item.link_text}
+                </span>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
   );
 }
