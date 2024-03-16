@@ -14,8 +14,9 @@ const linkInfo = [
 export default function Home() {
   return (
     <div className="h-full bg-slate-100 pt-0 pb-20 px-1.5">
-      <div className="flex justify-center">
+      <div className="flex justify-center flex-col items-center">
         <img src="/mahak_calligraphy.png" width={300} height={300} />
+        <p className="text-lg font-semibold mb-4">Mahak Bharatkar</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-2 gap-y-3">
