@@ -21,10 +21,9 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-x-2 gap-y-3">
         {linkInfo.map((item) => {
           return (
-            <a href={item.url}>
+            <a href={item.url} key={item.link_text}>
               <div
-                className="bg-[#C84E59] rounded-lg shadow-xl min-h-[50px] px-2 py-2 flex items-center justify-start"
-                key={item.link_text}
+                className="bg-[#C84C45] rounded-lg shadow-xl min-h-[50px] px-2 py-2 flex items-center justify-start"
               >
                 {item.image ? (
                   <img
