@@ -9,6 +9,11 @@ const linkInfo = [
     url: "https://mahak-portfolio.vercel.app/",
     image: "/android-chrome-192x192.png",
   },
+  {
+    link_text: "Visit online store | Calligraphy supplies",
+    url: 'https://nyctophiles.myinstamojo.com/',
+    image: "/mahak_insta.png",
+  }
 ];
 
 export default function Home() {
